@@ -1,0 +1,976 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="assets/js/device.js"></script>
+    <!-- End Google Tag Manager -->
+    <title>Đường nhà bạn có hoa sữa không?</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5,user-scalable=5"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Core stylesheet -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/css/fontawesome.min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/css/general_v2_min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://is.vnecdn.net/v1/core/css/general_v2_min.css"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://is.vnecdn.net/v1/core/css/global.css"
+    />
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+    <!-- End Core stylesheet -->
+    <!-- Style's Leo -->
+    <link type="text/css" rel="stylesheet" href="assets/css/custom.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/wishes.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/leaflet.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/maplibre-gl.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/end-note.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/hoa-sua.css?v=12" />
+    <link type="text/css" rel="stylesheet" href="assets/css/mobile.css?v=12" />
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/lightbox-custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Mapbox GL JS CSS -->
+    <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css" rel="stylesheet"> -->
+    <!-- script -->
+    <style>
+      .comment_item .avata_coment,
+      .input_comment .avata_coment {
+        width: 36px !important;
+        height: 36px !important;
+      }
+      .comment_item .avata_coment {
+        width: 36px !important;
+        height: 36px !important;
+      }
+
+      .vne-topbar .vne-block-right .vne-social .vne-social-item {
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+        line-height: 1 !important;
+      }
+      .topbar .block-right .social .social-item {
+        justify-content: center !important;
+        align-items: center !important;
+        display: flex !important;
+        line-height: 1 !important;
+        text-decoration: none !important;
+      }
+      .input_comment .avata_coment img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+      }
+      .like_google {
+        right: 115px !important;
+      }
+      .pop-quy-dinh {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+      }
+      .filter_coment a {
+        font-size: 14px !important;
+      }
+      .filter_coment a.active {
+        font-size: 14px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="assets/css/lightbox.css" /> --><!-- TimelineJS --><!-- <link
+      title="timeline-styles"
+      rel="stylesheet"
+      href="assets/css/timeline.css"
+    /> -->
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/css/interactive.css"
+    /><!-- PC-specific CSS -->
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- <link type="text/css" rel="stylesheet" href="assets/css/morphing.css" /> --><!-- End Style's Leo --><!--Start include CSS Extend-->
+    <!-- End Google Tag Manager (noscript) --><!-- Document Warpper -->
+    <div id="warpper" class="clearfix">
+      <!-- Top Nav -->
+      <div id="topbar" class="topbar fixed-top clearfix nav-down">
+        <div class="container">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=""
+          >
+            <span class="sr-only">Toggle navigation</span
+            ><span class="toggle-icon"></span>
+          </button>
+          <a href="//vnexpress.net/" class="logo" id="logo"
+            ><img
+              src="assets/images/logo-150x29.png"
+              alt="VnExpress"
+              class="pc-only img-100"
+          /></a>
+          <div class="block-right">
+            <a
+              href="#box_comment"
+              class="button-comments count_comment"
+              data-target=""
+            >
+              <i class="fas fa-comment"></i>
+              <span class="counter">Bình luận</span>
+            </a>
+            <ul class="list-inline social">
+              <li>
+                <a
+                  href="javascript:;"
+                  class="si-facebook shape-circle social-item fb_share"
+                  data-type="fb_share"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="javascript:;"
+                  class="si-twitter shape-circle social-item tw_share"
+                  data-type="tw_share"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+            </ul>
+            <form
+              action="//timkiem.vnexpress.net/"
+              method="get"
+              class="block-right"
+            >
+              <div class="search">
+                <input
+                  autocomplete="off"
+                  type="text"
+                  class="search-input"
+                  placeholder="Tìm kiếm"
+                  maxlength="80"
+                  name="q"
+                /><span class="search-btn">
+                  <button type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- End Top Nav -->
+
+      <!-- Menu -->
+
+      <nav id="main_menu" class="main_menu_overlay" data-campaign="Sidebar">
+        <div class="menu-overlay-container">
+          <div class="menu-overlay-header">
+            <span class="menu-header-title">Tất cả chuyên mục</span>
+            <button
+              id="auto_close_left_menu_button"
+              class="menu-close-btn"
+              aria-label="Đóng menu"
+            >
+              <span>Đóng</span>
+              <svg
+                class="ic-close"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="menu-overlay-content">
+            <div class="menu-main-grid">
+              <!-- Column 1 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/vne-go" class="menu-col-title"
+                  >VnE-GO</a
+                >
+                <a
+                  href="https://vnexpress.net/vne-go/discover"
+                  class="menu-sub-link"
+                  >Discover</a
+                >
+                <a href="https://vnexpress.net/vne-go" class="menu-sub-link"
+                  >Shorts</a
+                >
+                <a
+                  href="https://vnexpress.net/vne-go/podcast"
+                  class="menu-sub-link"
+                  >Podcasts</a
+                >
+              </div>
+              <!-- Column 2 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/thoi-su" class="menu-col-title"
+                  >Thời sự</a
+                >
+                <a
+                  href="https://vnexpress.net/thoi-su/chinh-tri"
+                  class="menu-sub-link"
+                  >Chính trị</a
+                >
+                <a
+                  href="https://vnexpress.net/thoi-su/huong-toi-ky-nguyen-moi"
+                  class="menu-sub-link"
+                  >Kỷ nguyên mới</a
+                >
+                <a
+                  href="https://vnexpress.net/thoi-su/dan-sinh"
+                  class="menu-sub-link"
+                  >Dân sinh</a
+                >
+                <a
+                  href="https://vnexpress.net/thoi-su/lao-dong-viec-lam"
+                  class="menu-sub-link"
+                  >Việc làm</a
+                >
+                <a href="https://vnexpress.net/thoi-su" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 3 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/the-gioi" class="menu-col-title"
+                  >Thế giới</a
+                >
+                <a
+                  href="https://vnexpress.net/the-gioi/phan-tich"
+                  class="menu-sub-link"
+                  >Phân tích</a
+                >
+                <a
+                  href="https://vnexpress.net/the-gioi/tu-lieu"
+                  class="menu-sub-link"
+                  >Tư liệu</a
+                >
+                <a
+                  href="https://vnexpress.net/the-gioi/quan-su"
+                  class="menu-sub-link"
+                  >Quân sự</a
+                >
+                <a
+                  href="https://vnexpress.net/the-gioi/cuoc-song-do-day"
+                  class="menu-sub-link"
+                  >Cuộc sống đó đây</a
+                >
+                <a href="https://vnexpress.net/the-gioi" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 4 -->
+              <div class="menu-col">
+                <a
+                  href="https://vnexpress.net/kinh-doanh"
+                  class="menu-col-title"
+                  >Kinh doanh</a
+                >
+                <a
+                  href="https://vnexpress.net/kinh-doanh/net-zero"
+                  class="menu-sub-link"
+                  >NetZero</a
+                >
+                <a
+                  href="https://vnexpress.net/kinh-doanh/quoc-te"
+                  class="menu-sub-link"
+                  >Quốc tế</a
+                >
+                <a
+                  href="https://vnexpress.net/kinh-doanh/doanh-nghiep"
+                  class="menu-sub-link"
+                  >Doanh nghiệp</a
+                >
+                <a
+                  href="https://vnexpress.net/kinh-doanh/chung-khoan"
+                  class="menu-sub-link"
+                  >Chứng khoán</a
+                >
+                <a
+                  href="https://vnexpress.net/kinh-doanh"
+                  class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 5 -->
+              <div class="menu-col">
+                <a
+                  href="https://vnexpress.net/khoa-hoc-cong-nghe"
+                  class="menu-col-title"
+                  >Khoa học công nghệ</a
+                >
+                <a
+                  href="https://vnexpress.net/khoa-hoc-cong-nghe/bo-khoa-hoc-va-cong-nghe"
+                  class="menu-sub-link"
+                  >Hoạt động Bộ KH&CN</a
+                >
+                <a
+                  href="https://vnexpress.net/khoa-hoc-cong-nghe/chuyen-doi-so"
+                  class="menu-sub-link"
+                  >Chuyển đổi số</a
+                >
+                <a
+                  href="https://vnexpress.net/khoa-hoc-cong-nghe/doi-moi-sang-tao"
+                  class="menu-sub-link"
+                  >Đổi mới sáng tạo</a
+                >
+                <a
+                  href="https://vnexpress.net/khoa-hoc-cong-nghe/ai"
+                  class="menu-sub-link"
+                  >AI</a
+                >
+                <a
+                  href="https://vnexpress.net/khoa-hoc-cong-nghe"
+                  class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 6 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/goc-nhin" class="menu-col-title"
+                  >Góc nhìn</a
+                >
+                <a
+                  href="https://vnexpress.net/goc-nhin/chinh-tri-chinh-sach"
+                  class="menu-sub-link"
+                  >Chính trị & chính sách</a
+                >
+                <a
+                  href="https://vnexpress.net/goc-nhin/y-te-suc-khoe"
+                  class="menu-sub-link"
+                  >Y tế & sức khỏe</a
+                >
+                <a
+                  href="https://vnexpress.net/goc-nhin/kinh-doanh-quan-tri"
+                  class="menu-sub-link"
+                  >Kinh doanh & quản trị</a
+                >
+                <a
+                  href="https://vnexpress.net/goc-nhin/giao-duc-tri-thuc"
+                  class="menu-sub-link"
+                  >Giáo dục & tri thức</a
+                >
+                <a href="https://vnexpress.net/goc-nhin" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+
+              <!-- Row 2 -->
+              <!-- Column 7 -->
+              <div class="menu-col">
+                <a
+                  href="https://vnexpress.net/bat-dong-san"
+                  class="menu-col-title"
+                  >Bất động sản</a
+                >
+                <a
+                  href="https://vnexpress.net/bat-dong-san/chinh-sach"
+                  class="menu-sub-link"
+                  >Chính sách</a
+                >
+                <a
+                  href="https://vnexpress.net/bat-dong-san/thi-truong"
+                  class="menu-sub-link"
+                  >Thị trường</a
+                >
+                <a
+                  href="https://vnexpress.net/bat-dong-san/du-an"
+                  class="menu-sub-link"
+                  >Dự án</a
+                >
+                <a
+                  href="https://vnexpress.net/bat-dong-san/khong-gian-song"
+                  class="menu-sub-link"
+                  >Không gian sống</a
+                >
+                <a
+                  href="https://vnexpress.net/bat-dong-san"
+                  class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 8 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/suc-khoe" class="menu-col-title"
+                  >Sức khỏe</a
+                >
+                <a
+                  href="https://vnexpress.net/suc-khoe/tin-tuc"
+                  class="menu-sub-link"
+                  >Tin tức</a
+                >
+                <a
+                  href="https://vnexpress.net/suc-khoe/cac-benh"
+                  class="menu-sub-link"
+                  >Các bệnh</a
+                >
+                <a
+                  href="https://vnexpress.net/suc-khoe/song-khoe"
+                  class="menu-sub-link"
+                  >Sống khỏe</a
+                >
+                <a
+                  href="https://vnexpress.net/suc-khoe/vaccine"
+                  class="menu-sub-link"
+                  >Vaccine</a
+                >
+              </div>
+              <!-- Column 9 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/giai-tri" class="menu-col-title"
+                  >Giải trí</a
+                >
+                <a
+                  href="https://vnexpress.net/giai-tri/gioi-sao"
+                  class="menu-sub-link"
+                  >Giới sao</a
+                >
+                <a
+                  href="https://vnexpress.net/giai-tri/sach"
+                  class="menu-sub-link"
+                  >Sách</a
+                >
+                <a
+                  href="https://video.vnexpress.net/giai-tri"
+                  class="menu-sub-link"
+                  >Video</a
+                >
+                <a
+                  href="https://vnexpress.net/giai-tri/phim"
+                  class="menu-sub-link"
+                  >Phim</a
+                >
+                <a href="https://vnexpress.net/giai-tri" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 10 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/the-thao" class="menu-col-title"
+                  >Thể thao</a
+                >
+                <a
+                  href="https://vnexpress.net/the-thao/world-cup-2026"
+                  class="menu-sub-link"
+                  >World Cup 2026</a
+                >
+                <a href="https://vnexpress.net/bong-da" class="menu-sub-link"
+                  >Bóng đá</a
+                >
+                <a
+                  href="https://vnexpress.net/the-thao/du-lieu-bong-da"
+                  class="menu-sub-link"
+                  >Lịch thi đấu</a
+                >
+                <a
+                  href="https://vnexpress.net/the-thao/marathon"
+                  class="menu-sub-link"
+                  >Marathon</a
+                >
+                <a href="https://vnexpress.net/the-thao" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 11 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/phap-luat" class="menu-col-title"
+                  >Pháp luật</a
+                >
+                <a
+                  href="https://vnexpress.net/phap-luat/ho-so-pha-an"
+                  class="menu-sub-link"
+                  >Hồ sơ phá án</a
+                >
+                <a
+                  href="https://vnexpress.net/phap-luat/tu-van"
+                  class="menu-sub-link"
+                  >Tư vấn</a
+                >
+                <a
+                  href="https://vnexpress.net/phap-luat/video"
+                  class="menu-sub-link"
+                  >Video</a
+                >
+              </div>
+              <!-- Column 12 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/giao-duc" class="menu-col-title"
+                  >Giáo dục</a
+                >
+                <a
+                  href="https://vnexpress.net/giao-duc/tin-tuc"
+                  class="menu-sub-link"
+                  >Tin tức</a
+                >
+                <a
+                  href="https://vnexpress.net/giao-duc/tuyen-sinh"
+                  class="menu-sub-link"
+                  >Tuyển sinh</a
+                >
+                <a
+                  href="https://vnexpress.net/giao-duc/chan-dung"
+                  class="menu-sub-link"
+                  >Chân dung</a
+                >
+                <a
+                  href="https://vnexpress.net/giao-duc/du-hoc"
+                  class="menu-sub-link"
+                  >Du học</a
+                >
+                <a href="https://vnexpress.net/giao-duc" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+
+              <!-- Row 3 -->
+              <!-- Column 13 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/doi-song" class="menu-col-title"
+                  >Đời sống</a
+                >
+                <a
+                  href="https://vnexpress.net/doi-song/nhip-song"
+                  class="menu-sub-link"
+                  >Nhịp sống</a
+                >
+                <a
+                  href="https://vnexpress.net/doi-song/to-am"
+                  class="menu-sub-link"
+                  >Tổ ấm</a
+                >
+                <a
+                  href="https://vnexpress.net/doi-song/bai-hoc-song"
+                  class="menu-sub-link"
+                  >Bài học sống</a
+                >
+                <a
+                  href="https://vnexpress.net/doi-song/cooking"
+                  class="menu-sub-link"
+                  >Cooking</a
+                >
+                <a href="https://vnexpress.net/doi-song" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 14 -->
+              <div class="menu-col">
+                <a
+                  href="https://vnexpress.net/oto-xe-may"
+                  class="menu-col-title"
+                  >Xe</a
+                >
+                <a
+                  href="https://vnexpress.net/oto-xe-may/thi-truong"
+                  class="menu-sub-link"
+                  >Thị trường</a
+                >
+                <a
+                  href="https://vnexpress.net/oto-xe-may/xe-dien"
+                  class="menu-sub-link"
+                  >Xe điện</a
+                >
+                <a
+                  href="https://vnexpress.net/oto-xe-may/dien-dan"
+                  class="menu-sub-link"
+                  >Diễn đàn</a
+                >
+                <a
+                  href="https://vnexpress.net/oto-xe-may/v-car"
+                  class="menu-sub-link"
+                  >V-Car</a
+                >
+                <a
+                  href="https://vnexpress.net/oto-xe-may"
+                  class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 15 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/du-lich" class="menu-col-title"
+                  >Du lịch</a
+                >
+                <a
+                  href="https://vnexpress.net/du-lich/diem-den"
+                  class="menu-sub-link"
+                  >Điểm đến</a
+                >
+                <a
+                  href="https://vnexpress.net/du-lich/am-thuc"
+                  class="menu-sub-link"
+                  >Ẩm thực</a
+                >
+                <a
+                  href="https://vnexpress.net/du-lich/dau-chan"
+                  class="menu-sub-link"
+                  >Dấu chân</a
+                >
+                <a
+                  href="https://vnexpress.net/du-lich/tu-van"
+                  class="menu-sub-link"
+                  >Tư vấn</a
+                >
+                <a href="https://vnexpress.net/du-lich" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+              <!-- Column 16 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/y-kien" class="menu-col-title"
+                  >Ý kiến</a
+                >
+                <a
+                  href="https://vnexpress.net/y-kien/thoi-su"
+                  class="menu-sub-link"
+                  >Thời sự</a
+                >
+                <a
+                  href="https://vnexpress.net/y-kien/doi-song"
+                  class="menu-sub-link"
+                  >Đời sống</a
+                >
+              </div>
+              <!-- Column 17 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/tam-su" class="menu-col-title"
+                  >Tâm sự</a
+                >
+                <a
+                  href="https://vnexpress.net/tam-su/hen-ho"
+                  class="menu-sub-link"
+                  >Hẹn hò</a
+                >
+              </div>
+              <!-- Column 18 -->
+              <div class="menu-col">
+                <a href="https://vnexpress.net/thu-gian" class="menu-col-title"
+                  >Thư giãn</a
+                >
+                <a
+                  href="https://vnexpress.net/thu-gian/cuoi"
+                  class="menu-sub-link"
+                  >Cười</a
+                >
+                <a
+                  href="https://vnexpress.net/thu-gian/do-vui"
+                  class="menu-sub-link"
+                  >Đố vui</a
+                >
+                <a
+                  href="https://vnexpress.net/thu-gian/chuyen-la"
+                  class="menu-sub-link"
+                  >Chuyện lạ</a
+                >
+                <a
+                  href="https://vnexpress.net/thu-gian/crossword"
+                  class="menu-sub-link"
+                  >Crossword</a
+                >
+                <a href="https://vnexpress.net/thu-gian" class="menu-more-link"
+                  >Xem thêm</a
+                >
+              </div>
+            </div>
+
+            <div class="menu-right-sidebar">
+              <a
+                href="https://vnexpress.net/spotlight"
+                class="sidebar-main-item"
+                >Spotlight</a
+              >
+              <a href="https://vnexpress.net/anh" class="sidebar-main-item"
+                >Ảnh</a
+              >
+              <a
+                href="https://vnexpress.net/infographics"
+                class="sidebar-main-item"
+                >Infographics</a
+              >
+
+              <div class="sidebar-divider"></div>
+
+              <a
+                href="https://vnexpress.net/tin-tuc-24h"
+                class="sidebar-main-item"
+                >Mới nhất</a
+              >
+              <a
+                href="https://vnexpress.net/tin-xem-nhieu"
+                class="sidebar-main-item"
+                >Xem nhiều</a
+              >
+              <a href="https://vnexpress.net/tin-nong" class="sidebar-main-item"
+                >Tin nóng</a
+              >
+              <a
+                href="https://vnexpress.net/lich-van-nien"
+                class="sidebar-main-item"
+                >Lịch vạn niên</a
+              >
+
+              <div class="sidebar-divider"></div>
+
+              <a
+                href="https://raovat.vnexpress.net/?utm_campaign=VNEXPRESS&utm_source=footer&utm_medium=menu"
+                class="sidebar-main-item"
+                >Rao vặt</a
+              >
+
+              <div class="sidebar-divider"></div>
+
+              <div class="sidebar-main-item sidebar-title-static">Liên hệ</div>
+              <a
+                href="https://vnexpress.net/lien-he-toa-soan/"
+                class="sidebar-contact-row"
+              >
+                <svg
+                  class="contact-ic"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                Tòa soạn
+              </a>
+              <a
+                href="https://eclick.vn/lien-he/?utm_source=VNE&utm_medium=CPC_BOX&utm_campaign=LienHeQuangCao"
+                class="sidebar-contact-row"
+              >
+                <svg
+                  class="contact-ic"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                Quảng cáo
+              </a>
+
+              <div class="sidebar-divider"></div>
+
+              <div class="sidebar-main-item sidebar-title-static">
+                Tải ứng dụng
+              </div>
+              <div class="sidebar-apps">
+                <a href="https://vnexpress.net/" class="app-btn">
+                  <span class="app-icon vne-app-logo">V</span>
+                  <span>VnExpress</span>
+                </a>
+                <a href="https://vnexpress.net/" class="app-btn">
+                  <span class="app-icon int-app-logo">E</span>
+                  <span>International</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- End Menu -->
+
+      <!-- Main Content -->
+      <section class="fck_detail">
+        <div class="vne-hs" id="vne-hs">
+          <div class="vne-hs-head">
+            <h1 class="vne-hs-title">Đường nhà bạn có hoa sữa không?</h1>
+            <p class="vne-hs-sapo">Hoa sữa có mặt ở <span data-vne-hs-stat="hs"></span> trong <span data-vne-hs-stat="routes"></span> tuyến phố mà Đề án cây xanh của Hà Nội liệt kê loài cây hiện có, tức gần một nửa.</p>
+            <p class="vne-hs-text">Nhập tên đường hoặc phường, dùng vị trí hiện tại hoặc bấm lên bản đồ để biết nơi bạn ở nằm trên, hay cách bao xa một tuyến có hoa sữa.</p>
+          </div>
+
+          <div class="vne-hs-stage">
+            <div class="vne-hs-map" id="vne-hs-map"></div>
+            <div class="vne-hs-panel">
+              <div class="vne-hs-box vne-hs-searchbox">
+                <form class="vne-hs-form" autocomplete="off" role="search">
+                  <input class="vne-hs-input" type="search" placeholder="Nhập tên đường hoặc phường" aria-label="Tên đường hoặc phường" />
+                  <button class="vne-hs-btn" type="submit">Tìm</button>
+                </form>
+                <ul class="vne-hs-sug" hidden></ul>
+                <button class="vne-hs-loc" type="button">Dùng vị trí của tôi</button>
+                <p class="vne-hs-hint">Hoặc bấm vào một điểm trên bản đồ.</p>
+              </div>
+              <div class="vne-hs-box vne-hs-res" hidden></div>
+            </div>
+            <div class="vne-hs-box vne-hs-legend">
+              <div class="vne-hs-leg-row"><i class="vne-hs-sw"></i><span>Đường có hoa sữa (<b data-vne-hs-stat="hs_drawn"></b> tuyến vẽ được)</span></div>
+              <div class="vne-hs-leg-row"><i class="vne-hs-sw vne-hs-sw-hn"></i><span>Ranh Hà Nội</span></div>
+              <p class="vne-hs-leg-sub">Đường chưa tô màu: không có trong danh sách của Đề án, chưa có dữ liệu.</p>
+            </div>
+          </div>
+
+          <div class="vne-hs-text-wrap">
+            <p class="vne-hs-text"><b>Cách đọc:</b> VnExpress đối chiếu cột "một số chủng loại cây hiện có" của từng tuyến trong Phụ lục 01 và 02 của Đề án quản lý, phát triển hệ thống cây xanh, công viên, vườn hoa, mặt nước trên địa bàn Hà Nội (Sở Xây dựng lập, 2026) với hình dạng đường trên OpenStreetMap. Tuyến nào có hoa sữa trong cột này được tô xanh.</p>
+            <p class="vne-hs-text">Cột trên chỉ nêu "một số" loài, nên đường không được tô xanh vẫn có thể có hoa sữa. Đường chưa có màu là nơi Đề án không liệt kê, chưa có dữ liệu.</p>
+            <p class="vne-hs-text">OpenStreetMap - bản đồ mở do cộng đồng xây dựng - không có vị trí từng cây hoa sữa. Trong 14.590 cây được chấm ở khu vực quanh Hà Nội, chỉ 4 cây có ghi loài và không cây nào là hoa sữa.</p>
+          </div>
+
+          <div class="vne-en">
+            <div class="vne-en-inner">
+              <div class="vne-en-note">
+                <p><b>Về dữ liệu và phương pháp:</b></p>
+                <p>- Loài cây hiện có trên từng tuyến lấy từ Phụ lục 01 và 02 của Đề án quản lý, phát triển hệ thống cây xanh, công viên, vườn hoa, mặt nước trên địa bàn thành phố Hà Nội do Sở Xây dựng lập (2026). Cột này nêu "một số chủng loại", không phải kiểm kê đầy đủ.</p>
+                <p>- Hình dạng đường lấy từ OpenStreetMap, ghép theo tên đường và địa bàn phường, xã ghi trong Đề án. Có <span data-vne-hs-stat="nodraw"></span> tuyến (trong đó <span data-vne-hs-stat="hs_nodraw"></span> tuyến có hoa sữa) chưa vẽ được vì không tìm thấy đường trùng tên. Tên đường trùng ở nhiều nơi được chọn theo phường, xã nên có thể sai ở một số đoạn.</p>
+                <p>- Khoảng cách tới đường có hoa sữa gần nhất tính theo đường chim bay, chỉ xét các tuyến Đề án ghi hoa sữa.</p>
+                <p>- Ranh Hà Nội lấy từ OpenStreetMap. Nền bản đồ: OpenFreeMap, dữ liệu © OpenMapTiles và © OpenStreetMap contributors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- End Main Content -->
+      <!-- TIN XEM THEM -->
+      <section
+        class="page-detail middle-detail tin-bai-lien-quan"
+        id="middle-detail"
+      >
+        <div class="container">
+          <div
+            data-component="true"
+            data-component-type="tin_xemthem"
+            data-component-value=""
+          ></div>
+        </div>
+      </section>
+      <!-- COMMENTS BOX --><!-- END COMMENTS BOX --><!-- BÀI CÙNG CHUYÊN MỤC -->
+      <section class="container datachuyenmuc_container">
+        <div id="dataContainer" class="data_tinthemcungchuyenmuc"></div>
+      </section>
+      <!-- END BÀI CÙNG CHUYÊN MỤC -->
+      <!-- Core Script -->
+      <script
+        type="text/javascript"
+        src="https://s1.vnecdn.net/vnexpress/restruct/j/v8629/v3/helper/jquery-2.1.4.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="assets/js/jquery.migrate.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="assets/js/header-sticky.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://is.vnecdn.net/v1/core/js/jquery.nicescroll.min.js"
+      ></script>
+      <script type="text/javascript" src="assets/js/lib.min.js"></script>
+      <script type="text/javascript" src="assets/js/tin-xem-them.js"></script>
+
+      <!-- GSAP ScrollTrigger -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+      <!-- Scroll Effects --><!-- <script type="text/javascript" src="assets/js/scroll-effects.js"></script> --><!-- <script src="assets/js/js-md5.min.js"></script> --><!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <script type="text/javascript" src="assets/js/wishes.js"></script>
+
+      <script type="text/javascript" src="assets/js/lightbox-init.js"></script>
+      <script
+        type="text/javascript"
+        src="assets/js/main-menu.js?v=20260119b"
+      ></script>
+      <!-- End Core Script --><!--Start include JS Extend--><!-- <script type="text/javascript" src="assets/js/datatables.min.js"></script> --><!-- <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie_html.min.js"></script>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script> --><!-- <script src="assets/js/bootstrap.min.js"></script> -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"
+      ></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"
+      ></script>
+      <!-- <script src="assets/js/papaparse.min.js"></script> -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script> -->
+
+      <!-- <script src="assets/js/wavesurfer.min.js"></script> --><!-- <script src="assets/js/svg.min.js"></script> -->
+      <script src="assets/js/baicungchuyenmuc.js"></script>
+      <script src="assets/js/leaflet.js"></script>
+      <script src="assets/js/maplibre-gl.js"></script>
+      <script src="assets/js/leaflet-maplibre-gl.js"></script>
+      <script src="assets/js/ban-do-nen.js"></script>
+      <script src="assets/js/hoa-sua-data.js?v=12"></script>
+      <script src="assets/js/hoa-sua.js?v=12"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <!-- <script src="assets/js/ba-slider.js"></script> --><!-- <script src="assets/js/leo-lightbox-galary.js"></script> -->
+      <script>
+        AOS.init();
+      </script>
+      <!-- Social Share Script -->
+
+      <!-- TimelineJS init --><!-- <script src="assets/js/timeline.js"></script> --><!-- Audio Script --><!-- <script src="assets/js/audio.js"></script> -->
+    </div>
+    <!-- End Document Warpper -->
+  </body>
+</html>
